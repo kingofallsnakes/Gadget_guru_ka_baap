@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Member.master.cs" Inherits="User_Member" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <!-- Reference the updated USER.css -->
+    <link href="USER.css?v=2" rel="stylesheet" type="text/css" />
+    
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <!-- Fixed Header -->
+        <div id="headd">
+            <!-- Centered table for logo, search, user info -->
+            <table class="style1">
+                <tr>
+                    <td class="style3">&nbsp;</td>
+                    <td class="style2">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/logoosmall.png" />
+                    </td>
+                    <td class="style4">
+                        <asp:TextBox ID="TextBox1" runat="server" BorderColor="#272727" 
+                            BorderStyle="Solid" BorderWidth="1px" Height="24px" Width="367px" />
+                        <asp:Button ID="Button1" runat="server" CssClass="btn" Height="28px" 
+                            Text="Search" onclick="Button1_Click" />
+                    </td>
+                    <td class="style5">&nbsp;</td>
+                    <td>
+                        <table class="style6">
+                            <tr>
+                                <td class="style10">
+                                    <asp:Label ID="lblname" runat="server"></asp:Label>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <asp:LinkButton ID="LinkButton2" runat="server" 
+                                        onclick="LinkButton2_Click" PostBackUrl="~/Home.aspx" 
+                                        CausesValidation="False" CssClass="mnulnk">
+                                        LogOut
+                                    </asp:LinkButton>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            
+            <!-- Fixed Menu Bar below the header -->
+            <div id="mnu">
+                <table class="style8">
+                    <tr>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="mnulnk" 
+                                PostBackUrl="~/User/Default.aspx" CausesValidation="False">
+                                Home
+                            </asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton4" runat="server" CssClass="mnulnk" 
+                                PostBackUrl="~/User/MyAccount.aspx" CausesValidation="False">
+                                My Account
+                            </asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton5" runat="server" CssClass="mnulnk" 
+                                PostBackUrl="~/User/MyOrder.aspx" CausesValidation="False">
+                                My Order
+                            </asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton6" runat="server" CssClass="mnulnk" 
+                                PostBackUrl="~/User/MyPayment.aspx" CausesValidation="False">
+                                My Payment
+                            </asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="mnulnk" 
+                                PostBackUrl="~/User/MyCart.aspx" CausesValidation="False">
+                                My Cart
+                            </asp:LinkButton>
+                        </td>
+                        <td class="mnulnk">
+                            <asp:LinkButton ID="LinkButton7" runat="server" CssClass="mnulnk" 
+                                PostBackUrl="~/User/ChangePass.aspx" CausesValidation="False">
+                                ChangePassword
+                            </asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div id="main">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+    </form>
+</body>
+</html>

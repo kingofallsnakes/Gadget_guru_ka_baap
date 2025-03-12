@@ -1,0 +1,255 @@
+﻿    <%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>cobra</title>
+    
+    <link href="meera.css?v=2" rel="stylesheet" type="text/css" />  
+    <link rel="stylesheet" type="text/css" href="engine1/style.css?v=2" media="screen" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+
+    <style type="text/css">
+        .style2 { width: 991px; }
+        .style3 { width: 378px; }
+        .style4 { width: 533px; }
+        .style7 { width: 996px; }
+        .style8 { width: 554px; }
+        .style9 { width: 383px; }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <!-- TOP HEADER (Logo + Search) -->
+        <div id="top">
+            <table class="style7">
+                <tr>
+                    <td class="style8">
+                        <asp:Image ID="Image3" runat="server" ImageUrl="~/images/logo1.png" />
+                    </td>
+                    <td>
+                        <table class="style9">
+                            <tr>
+                                <td>
+                                    <asp:TextBox 
+                                        ID="txtsearch0" 
+                                        runat="server" 
+                                        Width="300px"
+                                        BorderColor="#272727" 
+                                        BorderStyle="Solid" 
+                                        BorderWidth="2px"
+                                        Height="35px" />
+                                </td>
+                                <td>
+                                    <asp:Button 
+                                        ID="Button9" 
+                                        runat="server" 
+                                        Text="Search"
+                                        OnClick="Button2_Click"
+                                        Width="78px" 
+                                        CssClass="btn" 
+                                        CausesValidation="False" 
+                                        Height="30px" />
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- MAIN MENU -->
+        <div id="menu">
+            <table class="style2">
+                <tr>
+                    <td>
+                        <asp:Button 
+                            ID="Button3" 
+                            runat="server" 
+                            Text="HOME" 
+                            CssClass="btnmenu"
+                            PostBackUrl="~/Home.aspx" 
+                            CausesValidation="False" />
+                    </td>
+                    <td>
+                        <asp:Button 
+                            ID="Button4" 
+                            runat="server" 
+                            Text="SIGN UP" 
+                            CssClass="btnmenu"
+                            PostBackUrl="~/Registration.aspx" 
+                            CausesValidation="False" />
+                    </td>
+                    <td>
+                        <asp:Button 
+                            ID="Button5" 
+                            runat="server" 
+                            Text="LOGIN" 
+                            CssClass="btnmenu"
+                            PostBackUrl="~/Login.aspx" 
+                            CausesValidation="False" />
+                    </td>
+                    <td>
+                        <asp:Button 
+                            ID="Button6" 
+                            runat="server" 
+                            Text="PRODUCT" 
+                            CssClass="btnmenu"
+                            PostBackUrl="~/PRODUCT.aspx" 
+                            CausesValidation="False" />
+                    </td>
+                    <td>
+                        <asp:Button 
+                            ID="Button7" 
+                            runat="server" 
+                            Text="FEEDBACK" 
+                            CssClass="btnmenu"
+                            PostBackUrl="~/Feedback.aspx" 
+                            CausesValidation="False" />
+                    </td>
+                    <td>
+                        <asp:Button 
+                            ID="Button8" 
+                            runat="server" 
+                            Text="ADMIN" 
+                            CssClass="btnmenu"
+                            PostBackUrl="~/admin/login.aspx" 
+                            CausesValidation="False" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SECOND CONTAINER (login area, brand area, etc.) -->
+        <div id="second">
+            <!-- If you have a separate #login bar, place it here or unify with #second if you prefer -->
+            <div id="login">
+                <table class="style2">
+                    <tr>
+                        <td width="45%">&nbsp;</td>
+                        <td>
+                            <table class="style4">
+                                <tr>
+                                    <td style="text-align: right; color: #000000;">UserName :</td>
+                                    <td>
+                                        <asp:TextBox 
+                                            ID="txtuname" 
+                                            runat="server" 
+                                            CssClass="txt">
+                                        </asp:TextBox>
+                                    </td>
+                                    <td style="text-align: right; color: #000000;">Password :</td>
+                                    <td>
+                                        <asp:TextBox 
+                                            ID="txtupass" 
+                                            runat="server" 
+                                            CssClass="txt" 
+                                            TextMode="Password">
+                                        </asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:Button 
+                                            ID="btnlogin" 
+                                            runat="server" 
+                                            CssClass="btn" 
+                                            Text="Login"
+                                            OnClick="btnlogin_Click" 
+                                            CausesValidation="False" />
+                                        <asp:Label 
+                                            ID="lbll" 
+                                            runat="server" 
+                                            ForeColor="White">
+                                        </asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- MAIN AREA (BRANDS, ITEMS, ETC.) -->
+            <div id="amain">
+                <div id="acate">
+                    <table class="tbl">
+                        <tr>
+                            <td class="tblhead">Brands</td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <asp:GridView 
+                                    ID="GridView1" 
+                                    runat="server" 
+                                    AutoGenerateColumns="False" 
+                                    ShowHeader="False"
+                                    Width="100%" 
+                                    CellPadding="5" 
+                                    ForeColor="#333333" 
+                                    GridLines="None"
+                                    OnRowCommand="GridView1_RowCommand1">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:LinkButton 
+                                                    runat="server" 
+                                                    Text='<%#Eval("Cname") %>'
+                                                    CssClass="cgrid" 
+                                                    ForeColor="#272727"
+                                                    ID="lnkcate" 
+                                                    CommandName="cate"
+                                                    CommandArgument='<%#Eval("Cname") %>'>
+                                                </asp:LinkButton>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                                    <RowStyle 
+                                        BorderColor="White" 
+                                        BorderStyle="None" 
+                                        BorderWidth="0px"
+                                        Font-Size="Medium" 
+                                        Height="30px" 
+                                        HorizontalAlign="Center"
+                                        BackColor="#FFFBD6" 
+                                        ForeColor="#333333" />
+                                    <SelectedRowStyle 
+                                        BackColor="#FFCC66" 
+                                        ForeColor="Navy" 
+                                        Font-Bold="True" />
+                                    <SortedAscendingCellStyle BackColor="#FDF5AC" />
+                                    <SortedAscendingHeaderStyle BackColor="#4D0000" />
+                                    <SortedDescendingCellStyle BackColor="#FCF6C0" />
+                                    <SortedDescendingHeaderStyle BackColor="#820000" />
+                                </asp:GridView>
+                            </td>
+                        </tr>
+                        <tr><td align="center">&nbsp;</td></tr>
+                        <tr>
+                            <td align="center">
+                                <asp:Image ID="Image4" runat="server" ImageUrl="~/img/abc.gif" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="aitem">
+                    <!-- Content placeholder for user pages -->
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="foot">
+            All Rights Reserved @Cobra
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,348 @@
+﻿@keyframes iceCreamGradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	25% {
+		background-position: 50% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	75% {
+		background-position: 50% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Base settings for html and body */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Verdana, sans-serif;
+}
+
+body {
+	background: linear-gradient(-45deg, #ffa200, #ffffff, #087c00);
+	background-size: 500% 500%;
+	animation: iceCreamGradient 5s ease infinite;
+	min-height: 100vh;
+}
+
+/* Headings (unchanged) */
+h2 {
+	background: #800066;
+	color: #fff;
+	text-align: left;
+	font-size: 12px;
+	height: 20px;
+	padding: 5px;
+	margin-top: 2px;
+}
+
+/* Main header container */
+#top {
+	width: 100%;
+	max-width: 1200px;
+	height: 100px;
+	margin: 0 auto 5px auto;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 4px;
+	background: #343434;
+	border: 2px solid #555;
+	padding: 10px;
+	/* Using a lighter box-shadow from meera.css for a subtler effect */
+	box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Menu bar */
+#menu {
+	width: 100%;
+	max-width: 1200px;
+	height: 45px;
+	margin: 0 auto 10px auto;
+	background: #343434;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	padding: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Menu Buttons */
+.btnmenu {
+	border: 2px solid #272727;
+	background-color: #FF8C00;
+	color: #fff;
+	width: 140px;
+	height: 35px;
+	margin: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+	.btnmenu:hover {
+		background-color: #FFB347;
+		transform: translateY(-2px);
+		color: #333;
+	}
+
+/* Additional Menu Link styling */
+.mnu1 {
+	margin: 5px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 15px;
+	text-transform: uppercase;
+	transition: all 0.3s ease-in-out;
+	border-radius: 4px;
+	background: #FF8C00;
+	border: 2px solid #fff;
+	padding: 6px 10px;
+}
+
+	.mnu1:hover {
+		background: #FFB347;
+		color: #333;
+	}
+
+/* Content Containers & Flex Settings */
+/* The following elements are made flexible to push the footer down when content is short */
+#second,
+#main,
+#amain,
+#login,
+#slide,
+#cate,
+#item,
+#acate,
+#aitem,
+#itemm {
+	flex: 1;
+}
+
+/* Secondary content container */
+#second {
+	width: 100%;
+	max-width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.4);
+	border: 2px solid #999;
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Login bar */
+#login {
+	width: 100%;
+	max-width: 1200px;
+	height: 50px;
+	margin: 0 auto 10px auto;
+	background: #E6E6FA;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Slide area */
+#slide {
+	width: 100%;
+	max-width: 1200px;
+	height: 301px;
+	margin: 0 auto 10px auto;
+	border: 2px solid #272727;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	background: rgba(255,255,255,0.4);
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Main container */
+#main {
+	width: 100%;
+	max-width: 1200px;
+	height: 300px;
+	margin: 5px auto;
+	background: rgba(255,255,255,0.4);
+	border-radius: 6px;
+	box-shadow: 0 3px 0px 0px rgba(0,0,0,0.05);
+	border: 2px solid #999;
+}
+
+/* Footer */
+#foot {
+	width: 100%;
+	max-width: 1200px;
+	height: 50px;
+	padding: 10px;
+	font-size: 11px;
+	text-align: center;
+	margin: 10px auto;
+	background: #343434;
+	color: #fff;
+	border-radius: 6px;
+	box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+	margin-top: auto;
+}
+
+/* Left & Right Sections */
+#cate,
+#item,
+#amain,
+#acate,
+#aitem,
+#itemm {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto 10px auto;
+	background: rgba(255,255,255,0.4);
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	border: 2px solid #ccc;
+	overflow: auto;
+}
+
+/* Form container using Flexbox for sticky footer */
+form#form1 {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+/* Buttons */
+.btn {
+	margin: 5px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	padding: 6px 10px;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	text-transform: uppercase;
+	border-radius: 4px;
+	font-weight: bold;
+	background: #FF69B4;
+	border: 3px solid #fff;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+	.btn:hover {
+		background: #FFAACC;
+		transform: translateY(-2px);
+	}
+
+/* Text Inputs */
+.txt {
+	background-color: #fff;
+	border: 2px solid #272727;
+	padding: 2px 5px;
+	cursor: text;
+	height: 21px;
+	width: 110px;
+	border-radius: 4px;
+	transition: border-color 0.3s ease;
+	margin: 5px;
+}
+
+	.txt:hover {
+		border-color: #FF69B4;
+	}
+
+/* Labels */
+.lbl {
+	color: #272727;
+	text-align: right;
+	height: 25px;
+	font-weight: bold;
+}
+
+/* Tables */
+.tbl {
+	width: 100%;
+	border: 3px solid #000000;
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	background: rgba(255,255,255,0.3);
+}
+
+	.tbl td,
+	.tbl th {
+		padding: 20px;
+		color: #000000;
+		text-align: left;
+	}
+
+.tblhead {
+	height: 20px;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	background: #ff006a;
+	font-size: 16px;
+}
+
+/* Link Buttons / cgrid */
+.cgrid {
+	text-decoration: none;
+	color: #FF69B4;
+	font-weight: bold;
+}
+
+	.cgrid:hover {
+		text-decoration: underline;
+		color: #FFAACC;
+	}
+
+/* Image styles & hover effects */
+.img,
+.vimg {
+	border-radius: 8px;
+	border: 2px solid #ccc;
+	transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+	.img:hover,
+	.vimg:hover {
+		border-color: #36003f;
+		transform: scale(1.05);
+	}
+
+/* Minimal utility classes if needed */
+.style2,
+.style3,
+.style4,
+.style7,
+.style8,
+.style9 {
+	/* widths can remain if you truly need them, or remove if you'd rather rely on auto layout. */
+}

@@ -1,0 +1,169 @@
+﻿/* USER.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 1. Body & Background */
+body {
+    font-family: Verdana, sans-serif;
+    background: linear-gradient(135deg, #3CAEA3, #2B7A78); /* teal gradient */
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* 2. Fixed Header (#headd) */
+#headd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0F1F2F; /* dark navy background */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    z-index: 999;
+    padding-bottom: 5px; /* extra space for the menu */
+}
+
+    /* Center the table (style1) in the header */
+    #headd table.style1 {
+        width: 1200px; /* or your desired width */
+        margin: 0 auto; /* center horizontally */
+        border-collapse: collapse;
+    }
+
+/* 3. Fixed Menu (#mnu) just below header */
+#mnu {
+    position: fixed;
+    top: 70px; /* adjust if your header is taller */
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #0F1F2F;
+    border-bottom: 2px solid #FFA800;
+    z-index: 998;
+}
+
+    /* Center the table (style8) in the menu */
+    #mnu table.style8 {
+        width: 1200px;
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
+
+/* Menu links */
+.mnulnk {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 40px; /* vertically center text */
+    transition: color 0.3s ease;
+}
+
+    .mnulnk:hover {
+        color: #FFA800;
+        text-decoration: underline;
+    }
+
+/* 4. Main Content (#main) */
+#main {
+    width: 1200px;
+    margin: 120px auto 30px auto; /* offset for header+menu total = ~70 + 40 + buffer */
+    min-height: 400px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    padding: 20px;
+}
+
+/* 5. Table (tbl) & Table Header (tblhead) used in content pages */
+.tbl {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+    .tbl td, .tbl th {
+        padding: 10px;
+        text-align: left;
+    }
+
+.tblhead {
+    background: #1A2E40;
+    color: #FFA800;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 3px solid #FFA800;
+}
+
+/* 6. Buttons (.btn) */
+.btn {
+    display: inline-block;
+    background: #00796b;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+    .btn:hover {
+        background: #00695c;
+        transform: translateY(-2px);
+    }
+
+/* 7. Responsive Adjustments */
+@media screen and (max-width: 1300px) {
+    #headd table.style1,
+    #mnu table.style8,
+    #main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #main {
+        margin-top: 120px; /* keep offset from header+menu */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #headd {
+        padding-bottom: 10px;
+    }
+
+    #mnu {
+        top: 80px; /* might need adjusting if your header grows in height */
+    }
+
+        #headd table.style1,
+        #mnu table.style8,
+        #main {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+    .mnulnk {
+        display: block;
+        margin: 5px 0;
+        line-height: 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

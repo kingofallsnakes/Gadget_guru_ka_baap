@@ -1,0 +1,270 @@
+﻿
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    20% {
+        background-position: 20% 50%;
+    }
+
+    40% {
+        background-position: 40% 50%;
+    }
+
+    60% {
+        background-position: 60% 50%;
+    }
+
+    80% {
+        background-position: 80% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(-45deg, #2e0249, /* Deep Purple */
+    #1e0018, /* Dark Black/Navy */
+    #022648, /* Dark Blue */
+    #004c50, /* Ocean Blue */
+    #490040, /* Light Ocean Blue */
+    #40001f /* Dark Grayish Blue */
+    );
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+#header {
+    width: 1100px;
+    height: 120px;
+    background-color: #222;
+    margin: 0 auto 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    #header img {
+        max-height: 100%;
+        transition: transform 0.5s ease;
+    }
+
+        #header img:hover {
+            transform: scale(1.1);
+        }
+
+/* Main Layout */
+#main {
+    width: 1109px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+#mnu {
+    width: 200px;
+    background-color: #222;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+    #mnu:hover {
+        transform: translateX(5px);
+    }
+
+#cnt {
+    flex: 1;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tables & Grid Containers */
+.tbl {
+    width: 100%;
+    border: 1px solid #444;
+    background-color: #333;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.tbll {
+    width: 100%;
+    border: 1px solid #444;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Header */
+.tblhead, .tblhead1 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 3px solid;
+}
+
+.tblhead {
+    background-color: #111;
+    color: #fff;
+    border-color: #ff6f00;
+}
+
+.tblhead1 {
+    background: linear-gradient(135deg, #00bcd4, #009688);
+    color: #fff;
+    border-color: #00bcd4;
+}
+
+/* Labels & Form Controls */
+.lbl {
+    color: #ccc;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    padding: 8px 10px;
+}
+
+/* Textbox */
+.txt {
+    border: 1px solid #555;
+    color: #fff;
+    background-color: #444;
+    height: 35px;
+    width: 250px;
+    padding: 10px 10px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .txt:hover,
+    .txt:focus {
+        border-color: #00796b;
+        box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+    }
+
+/* Dropdown */
+.drp {
+    border: 1px solid #555;
+    color: #fff;
+    background-color: #444;
+    padding: 5px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    width: 200px;
+}
+
+    .drp:hover,
+    .drp:focus {
+        border-color: #00796b;
+    }
+
+/* Buttons */
+.btn, .mbtn {
+    background: #00796b;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn:hover, .mbtn:hover {
+        background: #00695c;
+        transform: translateY(-2px);
+    }
+
+/* GridView Enhancements */
+/* Assign CssClass="tblgrid" to GridViews for these styles */
+table.tblgrid {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+    table.tblgrid th,
+    table.tblgrid td {
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    table.tblgrid th {
+        background-color: #111;
+        color: #fff;
+        border-bottom: 3px solid #ff8c00;
+    }
+
+    table.tblgrid tr:nth-child(even) {
+        background-color: #2a2a2a;
+    }
+
+    table.tblgrid tr:hover {
+        background-color: #005f5f;
+        transition: background-color 0.3s ease;
+    }
+
+    table.tblgrid td {
+        border-bottom: 1px solid #555;
+    }
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    #header, #main, .tbl, #cnt {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #mnu {
+        width: 180px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main {
+        flex-direction: column;
+    }
+
+    #mnu, #cnt {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .drp, .btn, .mbtn {
+        width: 100%;
+    }
+
+    table.tblgrid th, table.tblgrid td {
+        padding: 8px 10px;
+    }
+}
